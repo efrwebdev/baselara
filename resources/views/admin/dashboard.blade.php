@@ -1,9 +1,5 @@
 @extends('admin.layout.main')
 
-@section('sidebar')  
-PHTML SIDEBAR
-@endsection 
-
 @section('content')     
 <div class="main-panel">
     <div class="content-wrapper">
@@ -574,7 +570,7 @@ PHTML SIDEBAR
         </div>
     </div>
     </div>
-    PHTML FOOTER
+
 </div>
 <!-- main-panel ends -->
 @endsection        

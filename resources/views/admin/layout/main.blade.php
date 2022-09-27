@@ -29,23 +29,24 @@
   </head>
   <body>
     <div class="container-scroller">
-      <div class="container-fluid page-body-wrapper">
-        <!-- partial:partials/_navbar.html -->
-        @yield('header')
-        <!-- partial -->
-
-        <!-- partial:partials/_sidebar.html -->
-        @yield('sidebar')
-        <!-- partial -->
-
+      @include('admin.blocks.navigation')
+      <div class="container-fluid page-body-wrapper">     
+        @include('admin.blocks.sidebar')
         @yield('content')
       </div>
       <!-- page-body-wrapper ends -->
-
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
+
+    @include('admin.blocks.footer')
+
     <!--FOOTER SCRIPTS-->
+    <script src="{{ url('staradmin/vendors/js/vendor.bundle.base.js') }}"></script>
+    <script src="{{ url('staradmin/vendors/js/vendor.bundle.addons.js') }}"></script>
+    <script src="{{ url('staradmin/vendors/js/shared/off-canvas.js') }}"></script>
+    <script src="{{ url('staradmin/vendors/js/shared/misc.js') }}"></script>
+    <script src="{{ url('staradmin/vendors/js/demo_1/dashboard.js') }}"></script>
   </body>
 </html>
 

@@ -26,7 +26,7 @@ Route::resource('guitars', GuitarsController::class);
 //Route::get('/admin', [AdminController::class, 'index']);
 
 Route::prefix('admin')->name('admin.')->group(function() {
-    Route::get('/', [DashboardController::class, 'index']);
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::match(['get', 'post'], '/login', [DashboardController::class, 'login'])->name('login');
     Route::resource('/users', UserController::class);
 });
