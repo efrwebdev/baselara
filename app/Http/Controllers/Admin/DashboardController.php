@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\DashboardFormRequest;
 
+require_once app_path()  . '/Helpers/admin_helpers.php';
+
 class DashboardController extends Controller
 {
     /**
@@ -16,6 +18,9 @@ class DashboardController extends Controller
     public function index()
     {
         //
+
+        $data = array("one","tow","three");
+        d($data);
         return view("admin.dashboard");
     }
 
