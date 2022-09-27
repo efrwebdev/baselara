@@ -1,0 +1,224 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #232323;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 15px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h5 {
+  font-size: 13px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+a {
+  color: #ef3b2d;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  z-index: 10;
+}
+header nav ul li {
+  padding: 5px 10px;
+}
+
+.banner {
+  background: rgb(224, 224, 224);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.banner .intro {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+}
+.banner .intro h1 {
+  color: #232323;
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.banner .intro h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.banner .intro h2 .roll-skills {
+  font-weight: 900;
+  display: inline-block;
+}
+.banner .intro h2 .roll-skills span {
+  display: none;
+}
+.banner .intro h2 .roll-skills span.show {
+  display: inline-block;
+}
+.banner .intro .banner-cta {
+  display: inline-block;
+  padding: 8px 35px;
+  background: #ef3b2d;
+  color: #FFF;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+.banner .banner-images {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+.banner .banner-images .banner-image {
+  position: absolute;
+  width: 500px;
+  transition: transform 1s;
+}
+.banner .banner-images .banner-image.bi-top-left {
+  top: 0;
+  left: -250px;
+  transform-origin: center;
+  -webkit-animation: rotateLeftToRight 1s ease-in-out;
+          animation: rotateLeftToRight 1s ease-in-out;
+}
+.banner .banner-images .banner-image.bi-top-right {
+  top: 0;
+  right: 0;
+  transform-origin: right;
+  -webkit-animation: rotateRightToLeft 1s ease-in-out;
+          animation: rotateRightToLeft 1s ease-in-out;
+}
+.banner .banner-images .banner-image.bi-bottom-left {
+  bottom: -300px;
+  left: -250px;
+  width: 600px;
+  transform-origin: center;
+  -webkit-animation: rotateLeftToRight 1s ease-in-out;
+          animation: rotateLeftToRight 1s ease-in-out;
+}
+.banner .banner-images .banner-image.bi-bottom-right {
+  bottom: 0;
+  right: 0;
+  transform-origin: right;
+  -webkit-animation: rotateRightToLeft 1s ease-in-out;
+          animation: rotateRightToLeft 1s ease-in-out;
+}
+
+section.section {
+  padding: 100px 0;
+}
+section h2 {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  color: #232323;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+section h2:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  color: #ef3b2d;
+  transform: scale(3);
+  transform-origin: center;
+  font-weight: bold;
+  opacity: 0.1;
+  z-index: -1;
+}
+section#about h2:before {
+  content: "About Me";
+}
+section#services h2:before {
+  content: "My Services";
+}
+
+.icontextbox {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+.icontextbox .icontextbox-icon {
+  flex-basis: 60px;
+  font-size: 32px;
+  color: #ef3b2d;
+  flex-grow: 1;
+  line-height: 1;
+}
+.icontextbox .icontextbox-text {
+  flex-basis: 100%;
+}
+.icontextbox .icontextbox-text h3 {
+  font-weight: 700;
+}
+
+@-webkit-keyframes rotateLeftToRight {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotateLeftToRight {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes rotateRightToLeft {
+  0% {
+    transform: rotate(200deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotateRightToLeft {
+  0% {
+    transform: rotate(200deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
