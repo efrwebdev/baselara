@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/efrapxca/public_html/dev/laravel
+    - export DEPLOYPATH=/home/efrapxca/public_html/
     - /bin/cp -R * $DEPLOYPATH
